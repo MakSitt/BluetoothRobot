@@ -7,47 +7,47 @@ char R_Data[4];
 byte R_index = 0;
 char command;
 //#include <Servo.h>
-#include <AFMotor.h>
+//#include <AFMotor.h>
 //#define trigPin 2
 //#define echoPin 13
 #define delay_turn_time 20
-AF_DCMotor motor_e1(3);
-AF_DCMotor motor_e2(4);
+//AF_DCMotor motor_e1(3);
+//AF_DCMotor motor_e2(4);
 //Servo SRV1;
 //Servo SRV2;
 //int d1,d2;
 void set_speed(int speed)
 {
-  motor_e1.setSpeed(255);
-  motor_e2.setSpeed(255);
+//  motor_e1.setSpeed(255);
+//  motor_e2.setSpeed(255);
 }
 void robot_forward()
 {
-  motor_e1.run(FORWARD);
-  motor_e2.run(FORWARD);
+ // motor_e1.run(FORWARD);
+//  motor_e2.run(FORWARD);
 }
 void robot_backward()
 {
-  motor_e1.run(BACKWARD);
-  motor_e2.run(BACKWARD);
+//  motor_e1.run(BACKWARD);
+//  motor_e2.run(BACKWARD);
 }
 void robot_release()
 {
   //Serial.println("Stop");
-  motor_e1.run(RELEASE);
-  motor_e2.run(RELEASE);
+ // motor_e1.run(RELEASE);
+//  motor_e2.run(RELEASE);
 }
 void turning_to_the_right()
 {
-  motor_e1.run(BACKWARD);
-  motor_e2.run(FORWARD);
-  delay(delay_turn_time);
+//  motor_e1.run(BACKWARD);
+//  motor_e2.run(FORWARD);
+//  delay(delay_turn_time);
 }
 void turning_to_the_left()
 {
-  motor_e1.run(FORWARD);
-  motor_e2.run(BACKWARD);
-  delay(delay_turn_time);
+ // motor_e1.run(FORWARD);
+ // motor_e2.run(BACKWARD);
+ // delay(delay_turn_time);
 }
 //int get_distance()
 //{
